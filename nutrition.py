@@ -1,6 +1,7 @@
 def main():
     #todo
     iten = getIten()
+    if iten == False: return None
     printCalorires(iten)
 
 def getIten():
@@ -22,14 +23,14 @@ def getIten():
         "pineapple": {"calories": 50},
         "plums": {"calories": 70},
         "strawberries": {"calories": 50},
-        "sweet_cherries": {"calories": 100},
+        "sweet cherries": {"calories": 100},
         "tangerine": {"calories": 50},
         "watermelon": {"calories": 80}
     }
-    fruit = None
-    while fruit not in fruits.keys():
-        fruit = input("Item: ").strip().lower()
-    return fruits[fruit]
+    fruit = input("Item: ").strip().lower()
+    if fruit in fruits.keys():
+        return fruits[fruit]
+    return False
 
 def printCalorires(fruit:dict):
     print(f"Calories: {fruit['calories']}")
