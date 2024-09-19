@@ -27,5 +27,11 @@ def getIten():
         "watermelon": {"calories": 80}
     }
     fruit = None
-    while fruit not in fruits:
+    while fruit not in fruits.keys():
         fruit = input("Item ").strip().lower()
+    return fruits[fruit]
+
+def printCalorires(fruit:dict):
+    print(f"Calories: {fruit["calories"]}")
+
+main()
