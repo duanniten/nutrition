@@ -28,10 +28,10 @@ def getIten():
     }
     fruit = None
     while fruit not in fruits.keys():
-        fruit = input("Item ").strip().lower()
+        fruit = input("Item: ").strip().lower()
     return fruits[fruit]
 
 def printCalorires(fruit:dict):
-    print(f"Calories: {fruit["calories"]}")
+    print(f"Calories: {fruit['calories']}")
 
 main()
